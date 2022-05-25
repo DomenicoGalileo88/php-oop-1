@@ -49,7 +49,7 @@ require __DIR__ . '/db.php';
         <div class="container">
             <h1>Movies:</h1>
             <div class="row row-cols-4 g-3">
-                <?php foreach ($movies as $movie) : ?>
+                <?php foreach ($filtered_movies as $movie) : ?>
                     <div class="col">
                         <div class="card text-center bg-dark text-white">
                             <img class="img-fluid" src="<?php echo $movie->poster ?>" alt="">

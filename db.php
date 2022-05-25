@@ -38,27 +38,28 @@ $movies = [
     new Movie('Black Widow', 'Adventure', '2016', 'it', 'https://lumiere-a.akamaihd.net/v1/images/image_b97b56f3.jpeg?region=0%2C0%2C540%2C810'),
 ];
 
-//var_dump($spiderman, $doctor_strange);
+//var_dump($movies);
 
 $genre = $_GET['genre'];
 var_dump($genre);
 
-function FilterGenre($data, $genre)
+function FilterGenre($data)
 {
-    if (!isset($genre) || $genre == '') {
+    if (!isset($_GET['genre']) || $_GET['genre'] == '') {
         //var_dump('return all genre');
 
-        $genres = $data;
+        $filtered_movies = $data;
     } else{
         //var_dump('return filtered genre');
 
-        $genres = array_filter($data, function ($element){
-            var_dump($element['genre'] === $_GET['genre']);
-            //return $element['genre'] == $_GET['genre'];
+        $filtered_movies = array_filter($data, function ($element){
+            //var_dump($element['genre'] == $_GET['genre']);
+            return $element->genre == $_GET['genre'];
         });
     }
-    return $genres;
+    return $filtered_movies;
 };
 
- $genres = FilterGenre($movies, $genre);
+ $filtered_movies = FilterGenre($movies);
+ var_dump($filtered_movies);
 
