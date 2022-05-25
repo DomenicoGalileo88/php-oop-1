@@ -1,19 +1,38 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.dim_card{
-    min-height: 380px !important;
+.card_text {
+  display: none;
+  color: white;
+  animation: opacity 0.4s linear;
+  border-radius: 0.2rem;
 }
 
-header img{
-    max-width: 100px;
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
 }
 
-main img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: top;
+.col:hover .card_text {
+  display: block;
+}
+
+header img {
+  max-width: 100px;
+}
+
+main img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
 }

@@ -46,24 +46,28 @@ require __DIR__ . '/db.php';
     </header>
 
     <main class="p-4-">
-        <div class="container">
-            <h1>Movies:</h1>
+        <div class="container py-4">
+            <h1 class="text-center my-4">Movies:</h1>
             <div class="row row-cols-4 g-3">
                 <?php foreach ($filtered_movies as $movie) : ?>
-                    <div class="col">
-                        <div class="card text-center bg-dark text-white dim_card">
-                            <img class="img-fluid" src="<?php echo $movie->poster ?>" alt="">
+                    <div class="col position-relative">
+                        <a href="#">
+                            <div class="card ">
+                                <img class="img-fluid" src="<?php echo $movie->poster ?>" alt="">
+                                <div class="card_text bg-primary active text-center position-absolute top-0 start-0 w-100 h-100">
+                                    <h5 class="pt-2">
+                                        <?php echo $movie->title ?>
+                                        </h4>
 
-                            <h5 class="pt-2">
-                                <?php echo $movie->title ?>
-                                </h4>
+                                        <p>
+                                            <?php echo $movie->genre ?> <br>
+                                            <?php echo $movie->year ?> <br>
+                                            <?php echo $movie->linguage ?>
+                                        </p>
+                                </div>
+                            </div>
+                        </a>
 
-                                <p>
-                                    <?php echo $movie->genre ?> <br>
-                                    <?php echo $movie->year ?> <br>
-                                    <?php echo $movie->linguage ?>
-                                </p>
-                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
