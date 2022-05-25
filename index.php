@@ -36,7 +36,7 @@ require __DIR__ . '/db.php';
                 <select class="ms-4" name="genre" id="genre">
                     <option value="">All genres</option>
                     <option value="Action">Action</option>
-                    <option value="Adventure">Adventures</option>
+                    <option value="Adventures">Adventures</option>
                 </select>
 
                 <button class="btn btn-dark" type="submit">Genre</button>
