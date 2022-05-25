@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    min-height: 370px;
+}
+
+header img{
+    max-width: 100px;
+}
+
+main img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+}
