@@ -51,7 +51,7 @@ require __DIR__ . '/db.php';
             <div class="row row-cols-4 g-3">
                 <?php foreach ($filtered_movies as $movie) : ?>
                     <div class="col">
-                        <div class="card text-center bg-dark text-white">
+                        <div class="card text-center bg-dark text-white dim_card">
                             <img class="img-fluid" src="<?php echo $movie->poster ?>" alt="">
 
                             <h5 class="pt-2">

@@ -41,7 +41,7 @@ $movies = [
 //var_dump($movies);
 
 $genre = $_GET['genre'];
-var_dump($genre);
+//var_dump($genre);
 
 function FilterGenre($data)
 {
@@ -61,5 +61,5 @@ function FilterGenre($data)
 };
 
  $filtered_movies = FilterGenre($movies);
- var_dump($filtered_movies);
+ //var_dump($filtered_movies);
 

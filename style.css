@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-.card{
-    min-height: 400px;
+.dim_card{
+    min-height: 380px !important;
 }
 
 header img{
